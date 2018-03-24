@@ -36,17 +36,16 @@
 'use strict';
 
 const fs = require('fs');
-const cors = require('cors');
+
+const allowedOriginsMatcher = /^https?:\/\/([\w-]+\.)*freecodecamp.org/;
 
 module.exports = function (app) {
   
   app.use(function (req, res, next) {
-      var allowedOrigins = ['https://pricey-hugger.gomix.me', 'http://pricey-hugger.gomix.me', 'https://freecodecamp.com', 'https://beta.freecodecamp.com', 'http://freecodecamp.com', 'http://beta.freecodecamp.com','http://localhost:3000', 'https://localhost:3000']
-       var origin = req.headers.origin;
-        if(allowedOrigins.indexOf(origin) > -1){
-             res.setHeader('Access-Control-Allow-Origin', origin);
-        }
-      //res.setHeader('Access-Control-Allow-Origin', 'https://pricey-hugger.gomix.me');
+      const origin = req.get('origin');
+      if (allowedOriginsMatcher.test(origin)) {
+            res.setHeader('Access-Control-Allow-Origin', origin);
+      }
       res.setHeader('Access-Control-Allow-Credentials', true);
       next();
   });
