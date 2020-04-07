@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "pug");
 
 app.route("/").get((req, res) => {
-  res.render("/home/mccor/Development/boilerplate-advancednode/views/pug");
+  res.render("pug/index");
 });
 
 app.listen(process.env.PORT || 3000, () => {
