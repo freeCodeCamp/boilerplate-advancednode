@@ -11,11 +11,12 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
-		"express": "^4.14.1",
-		"cors": "^2.8.1",
 		"body-parser": "^1.16.0",
+		"cors": "^2.8.1",
+		"express": "^4.14.1",
+		"helmet": "^3.4.0",
 		"mongodb": "^2.2.22",
-		"helmet": "^3.4.0"
+		"pug": "^2.0.4"
 	},
 	"engines": {
 		"node": "4.4.3"
