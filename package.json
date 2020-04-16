@@ -14,8 +14,10 @@
 		"body-parser": "^1.16.0",
 		"cors": "^2.8.1",
 		"express": "^4.14.1",
+		"express-session": "^1.17.0",
 		"helmet": "^3.4.0",
 		"mongodb": "^2.2.22",
+		"passport": "^0.4.1",
 		"pug": "^2.0.4"
 	},
 	"engines": {
