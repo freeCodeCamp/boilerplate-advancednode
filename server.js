@@ -11,7 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.route("/").get((req, res) => {
-  //Write your code here to render the Pug template
+  //Change the response to render the Pug template
+  res.send(`Pug template is not defined.`);
 });
 
 app.listen(process.env.PORT || 3000, () => {
