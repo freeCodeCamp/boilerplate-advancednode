@@ -13,7 +13,7 @@ app.set('view engine', 'pug');
 
 app.route("/").get((req, res) => {
   //Change the response to render the Pug template
-  res.render('/pug');
+  res.render(process.cwd() + '/views/pug/index');
 });
 
 app.listen(process.env.PORT || 3000, () => {
