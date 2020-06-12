@@ -8,12 +8,12 @@
   "description": "What am I about?",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "cors": "^2.8.1",
-    "express": "^4.16.1",
-    "pug": "^3.0.0"
+    "dotenv": "^8.2.0",
+    "express": "^4.16.1"
   },
   "engines": {
     "node": "^12.0.0"
@@ -24,11 +24,13 @@
   },
   "keywords": [
     "node",
-    "glitch",
     "express",
     "pug",
     "passport",
     "socketio"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
