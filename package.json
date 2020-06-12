@@ -8,10 +8,10 @@
   "description": "What am I about?",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
-    "cors": "^2.8.1",
     "dotenv": "^8.2.0",
     "express": "^4.16.1"
   },
@@ -31,6 +31,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "nodemon": "^2.0.4"
   }
 }

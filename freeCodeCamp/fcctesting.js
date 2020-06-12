@@ -37,44 +37,44 @@
 
 const fs = require('fs');
 
-const allowedOriginsMatcher = /^https?:\/\/([\w-]+\.)*freecodecamp.org/;
+const allowedOriginsMatcher = process.env.NODE_ENV === 'production' ? /^https?:\/\/([\w-]+\.)*freecodecamp.org/ : /^http:\/\/localhost:8000/;
 
 module.exports = function (app) {
-  
+
   app.use(function (req, res, next) {
-      const origin = req.get('origin');
-      if (allowedOriginsMatcher.test(origin)) {
-            res.setHeader('Access-Control-Allow-Origin', origin);
-      }
-      res.setHeader('Access-Control-Allow-Credentials', true);
-      next();
+    const origin = req.get('origin');
+    if (allowedOriginsMatcher.test(origin)) {
+      res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
   });
-  
+
   app.route('/_api/server.js')
-    .get(function(req, res, next) {
+    .get(function (req, res, next) {
       console.log('requested');
-      fs.readFile(process.cwd() + '/server.js', function(err, data) {
-        if(err) return next(err);
+      fs.readFile(process.cwd() + '/server.js', function (err, data) {
+        if (err) return next(err);
         res.send(data.toString());
       });
     });
-  
+
   app.route('/_api/package.json')
-    .get(function(req, res, next) {
+    .get(function (req, res, next) {
       console.log('requested');
-      fs.readFile(process.cwd() + '/package.json', function(err, data) {
-        if(err) return next(err);
+      fs.readFile(process.cwd() + '/package.json', function (err, data) {
+        if (err) return next(err);
         res.type('txt').send(data.toString());
       });
-    });  
-    
-  app.get('/_api/app-info', function(req, res) {
+    });
+
+  app.get('/_api/app-info', function (req, res) {
     var hs = Object.keys(res._headers)
       .filter(h => !h.match(/^access-control-\w+/));
     var hObj = {};
-    hs.forEach(h => {hObj[h] = res._headers[h]});
+    hs.forEach(h => { hObj[h] = res._headers[h] });
     delete res._headers['strict-transport-security'];
-    res.json({headers: hObj});
+    res.json({ headers: hObj });
   });
-  
+
 };
