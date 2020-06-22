@@ -17,8 +17,8 @@ html
     
     if showLogin
       hr
-      p Login Form
-      form(action='/login', method='post')
+      h2.center Login Form
+      form(action='/login', method='post').center
         div
           label Username:
           input(type='text', name='username')
@@ -30,8 +30,8 @@ html
           
     if showRegistration
       hr
-      p Registration Form
-      form(action='/register', method='post')
+      h2.center Registration Form
+      form(action='/register', method='post').center
         div
           label Username:
           input(type='text', name='username')
@@ -40,3 +40,9 @@ html
           input(type='password', name='password')
         div
           input(type='submit', value='Register')
+
+    if showSocialAuth
+      hr
+      h2.center Social Login
+      .login.center
+        a(href='/auth/github').text Login with Github!
