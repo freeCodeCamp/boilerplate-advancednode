@@ -9,3 +9,18 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+div > input {
+  margin: 0.5rem;
+}
+
+.login {
+  border: solid 2px #777;
+  width: 50%;
+  background-color: aliceblue;
+}
+
+a.text {
+  text-decoration: none;
+  font-weight: 700;
+}
