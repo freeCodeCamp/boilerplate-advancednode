@@ -8,7 +8,9 @@
     "watch": [
         "./views/pug/*",
         "./server.js",
-        "./public/"
+        "./auth.js",
+        "./routes.js",
+        "./public/*"
     ],
     "env": {
         "NODE_ENV": "development"
