@@ -37,15 +37,17 @@
 
 const fs = require('fs');
 
-const allowedOriginsMatcher = process.env.NODE_ENV === 'production' ? /^https?:\/\/([\w-]+\.)*freecodecamp.org/ : /^http:\/\/localhost:8000/;
+const allowedOrigins = [/^https?:\/\/([\w-]+\.)*freecodecamp.org/, /^http:\/\/localhost:\d+/];
 
 module.exports = function (app) {
 
   app.use(function (req, res, next) {
     const origin = req.get('origin');
-    if (allowedOriginsMatcher.test(origin)) {
+    if (allowedOrigins.some(regex => regex.test(origin))) {
       res.setHeader('Access-Control-Allow-Origin', origin);
+      console.log(origin);
     }
+
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
   });
