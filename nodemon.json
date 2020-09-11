@@ -1,0 +1,19 @@
+{
+    "restartable": "rs",
+    "ignore": [
+        ".git",
+        "node_modules/**/node_modules"
+    ],
+    "verbose": true,
+    "watch": [
+        "./views/pug/*",
+        "./server.js",
+        "./auth.js",
+        "./routes.js",
+        "./public/*"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js,json,pug,css"
+}

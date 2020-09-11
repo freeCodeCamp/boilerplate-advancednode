@@ -1,7 +1,7 @@
 html
   head
     title FCC Advanced Node and Express
-    meta(name='description', content='A cool thing made with Glitch')
+    meta(name='description', content='Home page')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -11,14 +11,14 @@ html
     h2.center#pug-success-message
     | Looks like this page is being rendered from Pug into HTML!
     | #{title}
-    p#pug-variable= message
+    p#pug-variable=message
     
     
     
     if showLogin
       hr
-      p Login Form
-      form(action='/login', method='post')
+      h2.center Login Form
+      form(action='/login', method='post').center
         div
           label Username:
           input(type='text', name='username')
@@ -30,8 +30,8 @@ html
           
     if showRegistration
       hr
-      p Registration Form
-      form(action='/register', method='post')
+      h2.center Registration Form
+      form(action='/register', method='post').center
         div
           label Username:
           input(type='text', name='username')
@@ -40,3 +40,9 @@ html
           input(type='password', name='password')
         div
           input(type='submit', value='Register')
+
+    if showSocialAuth
+      hr
+      h2.center Social Login
+      .login.center
+        a(href='/auth/github').text Login with Github!
