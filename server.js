@@ -1,7 +1,7 @@
 "use strict";
-require('dotenv').config()
+require("dotenv").config();
 const express = require("express");
-const myDB = require('./connection');
+const myDB = require("./connection");
 const fccTesting = require("./freeCodeCamp/fcctesting.js");
 
 const app = express();
@@ -12,8 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.route("/").get((req, res) => {
-  //Change the response to render the Pug template
-  res.render('Load your view here');
+  res.render("Load your view here");
 });
 
 app.listen(process.env.PORT || 3000, () => {
