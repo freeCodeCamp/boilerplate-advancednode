@@ -15,7 +15,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.16.1",
     "mongodb": "^3.6.1",
-    "node": "12.18.0"
+    "node": "12.18.0",
+    "pug": "^3.0.0"
   },
   "repository": {
     "type": "git",
