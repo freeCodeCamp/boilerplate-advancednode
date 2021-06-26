@@ -7,6 +7,7 @@ const session = require('express-session');
 const passport = require('passport');
 const ObjectID = require('mongodb').ObjectID;
 const models = require('./models');
+const LocalStrategy = require('passport-local')
 
 const app = express();
 app.set('view engine', 'pug')
@@ -38,6 +39,18 @@ passport.deserializeUser((id, done) => {
     done(null, doc);
   });
 });
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    models.User.findOne({ where: { username: username } }, function (err, user) {
+      console.log('User '+ username +' attempted to log in.');
+      if (err) { return done(err); }
+      if (!user) { return done(null, false); }
+      if (password !== user.password) { return done(null, false); }
+      return done(null, user);
+    });
+  }
+));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
