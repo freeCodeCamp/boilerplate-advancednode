@@ -18,7 +18,10 @@
     "mongodb": "^3.6.1",
     "node": "12.18.0",
     "passport": "^0.4.1",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "sequelize": "^6.6.4",
+    "sequelize-cli": "^6.2.0",
+    "sqlite3": "^5.0.2"
   },
   "repository": {
     "type": "git",

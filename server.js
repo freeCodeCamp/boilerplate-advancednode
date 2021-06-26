@@ -6,6 +6,7 @@ const fccTesting = require('./freeCodeCamp/fcctesting.js');
 const session = require('express-session');
 const passport = require('passport');
 const ObjectID = require('mongodb').ObjectID;
+const models = require('./models');
 
 const app = express();
 app.set('view engine', 'pug')
@@ -25,17 +26,17 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.route('/').get((req, res) => {
-  res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login'});
+  res.render(process.cwd() + '/views/pug/index', {title: 'Connected to Database', message: 'Please login'});
 });
 
 passport.serializeUser((user, done) => {
-  done(null, user._id);
+  done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
-  // myDataBase.findOne({ _id: new ObjectID(id) }, (err, doc) => {
-    done(null, null);
-  // });
+  models.User.findByPk({ where: { id: id } }, (err, doc) => {
+    done(null, doc);
+  });
 });
 
 const PORT = process.env.PORT || 3000;
