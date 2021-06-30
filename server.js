@@ -27,7 +27,19 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.route('/').get((req, res) => {
-  res.render(process.cwd() + '/views/pug/index', {title: 'Connected to Database', message: 'Please login'});
+  res.render(process.cwd() + '/views/pug/index', {
+    title: 'Connected to Database', 
+    message: 'Please login', 
+    showLogin: true
+  });
+});
+
+app.route('/login').post(passport.authenticate('local', { failureRedirect: '/' }), (req, res) => {
+  res.redirect('/profile');
+});
+
+app.route('/profile').get((req, res) => {
+  res.render(process.cwd() + '/views/pug/profile');
 });
 
 passport.serializeUser((user, done) => {
