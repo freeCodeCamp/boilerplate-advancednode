@@ -5,6 +5,8 @@ const myDB = require('./connection');
 const fccTesting = require('./freeCodeCamp/fcctesting.js');
 
 const app = express();
+app.set('view engine', 'pug');
+
 
 fccTesting(app); //For FCC testing purposes
 app.use('/public', express.static(process.cwd() + '/public'));
@@ -12,7 +14,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.route('/').get((req, res) => {
-  res.render('Load your view here');
+    res.render(
+      'pug', // process.cwd() + '/views/pug/index', 
+      {
+        title: 'Connected to Database', 
+        message: 'Please login'
+      });
+  });
 });
 
 const PORT = process.env.PORT || 3000;
