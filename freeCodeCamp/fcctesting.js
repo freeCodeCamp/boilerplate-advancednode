@@ -38,6 +38,7 @@ const fs = require("fs");
 
 const allowedOrigins = [
   /^https?:\/\/([\w-]+\.)*freecodecamp.org/,
+  /^https:\/\/([\w-]+\.)*gitpod.io/,
   /^http:\/\/localhost:\d+/,
 ];
 
@@ -51,6 +52,12 @@ module.exports = function (app) {
 
     res.setHeader("Access-Control-Allow-Credentials", true);
     next();
+  });
+
+  app.route("/_api/app").get((req, res) => {
+    console.log("requested");
+    const appClone = { ...app };
+    res.json(appClone);
   });
 
   app.route("/_api/server.js").get(function (req, res, next) {
@@ -79,9 +86,9 @@ module.exports = function (app) {
 
   app.route("/_api/package.json").get(function (req, res, next) {
     console.log("requested");
-    fs.readFile(process.cwd() + "/package.json", function (err, data) {
+    fs.readFile(process.cwd() + "/package.json", "utf-8", function (err, data) {
       if (err) return next(err);
-      res.type("txt").send(data.toString());
+      res.json(JSON.parse(data));
     });
   });
 
