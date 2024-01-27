@@ -1,0 +1,230 @@
+repo_name: freeCodeCamp/boilerplate-advancednode
+report_id: d02b48c53fa356a2fbe36bb66b370f42
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-27T03:50:34+00:00'
+requested_by: Prince-Mendiratta
+provider: github
+branch: main
+detected_tools_count: 17
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode
+  detection_source: Repo Metadata
+- name: Pug
+  description: Robust, elegant, feature rich template engine for nodejs
+  website_url: https://pugjs.org
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Templating Languages & Extensions
+  image_url: https://img.stackshare.io/service/1175/pug.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Jeremy Fiel
+  last_updated_on: 2020-04-23 06:09:15.000000000 Z
+- name: ExpressJS
+  description: Sinatra inspired web development framework for node.js -- insanely
+    fast, flexible, and simple
+  website_url: http://expressjs.com/
+  version: 4.17.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1163/hashtag.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
+- name: MongoDB
+  description: The database for giant ideas
+  website_url: http://www.mongodb.com/
+  version: 3.7.3
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1030/leaf-360x360.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: connection.js
+  last_updated_by: Sky020
+  last_updated_on: 2020-06-16 16:16:40.000000000 Z
+- name: Socket.IO
+  description: Realtime application framework (Node.JS server)
+  website_url: http://socket.io/
+  version: 2.3.0
+  open_source: true
+  hosted_saas: false
+  category: Application Hosting
+  sub_category: Realtime Backend / API
+  image_url: https://img.stackshare.io/service/1161/vI0ZZlhZ_400x400.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
+- name: Dotenv
+  description: Loads environment variables from .env for Nodejs projects
+  website_url: https://github.com/motdotla/dotenv
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Server Configuration and Automation
+  image_url: https://img.stackshare.io/service/8067/default_90dcb1286af7685c68df319c764b80704df1155b.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Sky020
+  last_updated_on: 2020-06-12 18:46:28.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode
+  detection_source: Repo Metadata
+- name: nodemon
+  description: A simple monitor script for use during development of a node.js app
+  website_url: http://nodemon.io/
+  version: 2.0.15
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Monitoring
+  sub_category: node.js Application Monitoring
+  image_url: https://img.stackshare.io/service/5577/preview.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sky020
+  last_updated_on: 2020-07-29 13:18:17.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Jeremy Fiel
+  last_updated_on: 2020-04-23 06:09:15.000000000 Z
+- name: Passport
+  description: Simple, unobtrusive authentication for Node.js
+  website_url: http://passportjs.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: User Management and Authentication
+  image_url: https://ucarecdn.com/8f3cac0e-b146-4f0f-878c-680a6671d804/
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
+- name: bcrypt
+  description: A bcrypt library for NodeJS
+  package_url: https://www.npmjs.com/bcrypt
+  version: 5.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16526/default_0a704f5fac0bffcf529c9a61658d0b9ddbf7504e.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
+- name: connect-mongo
+  description: MongoDB session store for Express and Connect
+  package_url: https://www.npmjs.com/connect-mongo
+  version: 3.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17588/default_e98b11d23d67b728bd1f3e02eba62d97a55febbd.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
+- name: cookie-parser
+  description: Parse HTTP request cookies
+  package_url: https://www.npmjs.com/cookie-parser
+  version: 1.4.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16136/default_def3edb85d7fbd20200a5cd7d0a1679e31bc8b3d.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
+- name: express
+  description: Fast, unopinionated, minimalist web framework
+  package_url: https://www.npmjs.com/express
+  version: 4.17.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15818/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
+- name: express-session
+  description: Simple session middleware for Express
+  package_url: https://www.npmjs.com/express-session
+  version: 1.17.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16239/default_180418c6fa6cdb8f7a3500f84a8fedb884fcb3fa.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
+- name: passport-local
+  description: Local username and password authentication strategy for Passport
+  package_url: https://www.npmjs.com/passport-local
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16747/default_adce7cef6d131ffc31466624541462e4db9534d4.png
+  detection_source_url: https://github.com/freeCodeCamp/boilerplate-advancednode/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Kristofer Koishigawa
+  last_updated_on: 2022-08-01 06:36:30.000000000 Z
