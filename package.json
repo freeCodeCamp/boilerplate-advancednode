@@ -1,7 +1,4 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
   "name": "fcc-advanced-node-and-express",
   "author": "http://github.com/JosephLivengood",
   "version": "0.0.1",
@@ -25,10 +22,6 @@
     "passport.socketio": "~3.7.0",
     "pug": "~3.0.0",
     "socket.io": "~2.3.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://glitch.com/#!/project/welcome-project"
   },
   "keywords": [
     "node",

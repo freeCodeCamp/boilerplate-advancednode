@@ -39,6 +39,7 @@ const fs = require("fs");
 const allowedOrigins = [
   /^https?:\/\/([\w-]+\.)*freecodecamp.org/,
   /^https:\/\/([\w-]+\.)*gitpod.io/,
+  /^https:\/\/([\w-]+\.)*github.dev/,
   /^http:\/\/localhost:\d+/,
 ];
 
